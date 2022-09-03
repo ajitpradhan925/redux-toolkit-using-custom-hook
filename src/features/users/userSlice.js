@@ -12,7 +12,6 @@ export const userSlice = createSlice({
         },
 
         [GetUser.fulfilled]: (state, action) => {
-            console.log("action ", action);
             const { payload: { data = [] } } = action;
             state.listUsers = data;
             state.loading = false;
